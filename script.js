@@ -1,8 +1,7 @@
-function Book(title,author,pages,readStatus){
+function Book(title,author,pages){
     this.title=title;
     this.author=author;
     this.pages=pages;
-    this.readStatus=readStatus;
 }
 
 let myLibrary=[];
@@ -33,18 +32,14 @@ const table = document.querySelector('.table');
 
 submitButton.addEventListener('click',(event)=>{
     
-    if((form.readStatus.value !== 'Yes'&&form.readStatus.value!=='No')===true){
-        alert("Please enter Yes or No in the specified case");
-        event.preventDefault(); 
-    }
-    else{
+    
         let book={};
-        addBookToLibrary(book=new Book(form.title.value,form.author.value,form.pages.value,form.readStatus.value));
+        addBookToLibrary(book=new Book(form.title.value,form.author.value,form.pages.value));
         table.innerHTML+=`<tr>
                                 <td>${myLibrary[myLibrary.length-1].title}</td>
                                 <td>${myLibrary[myLibrary.length-1].author}</td>
                                 <td>${myLibrary[myLibrary.length-1].pages}</td>
-                                <td>${myLibrary[myLibrary.length-1].readStatus}</td>
+                                <td><div class="text" data-text="${row}"> Not Read</div><input type="checkbox" data-id="${row}" onclick="change()"></td>
                                 <td><button data-row="${row}" class="remove" onclick="remove(event)">Remove</button></td>
                             </tr>`
         event.preventDefault();
@@ -53,7 +48,7 @@ submitButton.addEventListener('click',(event)=>{
         form.pages.value='';
         form.readStatus.value='';
         form.style.display = "none";
-        }
+
         row+=1;
 });
 
@@ -66,5 +61,15 @@ function remove(event){
    myLibrary.splice(document.querySelector(`[data-row="${row}"]`),1);
 }
 
+function change(){
+    let check = document.querySelector(`[data-id="${row}"]`);
+    let readStatus = document.querySelector(`[data-text="${row}"]`)
+    if(check.checked===true){
+        readStatus.innerHTML="Read";
+    }
+    else{
+        readStatus.innerHTML="Not Read";
+    }
+}
 
 
