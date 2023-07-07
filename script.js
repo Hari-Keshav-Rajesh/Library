@@ -39,7 +39,7 @@ submitButton.addEventListener('click',(event)=>{
                                 <td>${myLibrary[myLibrary.length-1].title}</td>
                                 <td>${myLibrary[myLibrary.length-1].author}</td>
                                 <td>${myLibrary[myLibrary.length-1].pages}</td>
-                                <td><div class="text" data-text="${row}"> Not Read</div><input type="checkbox" data-id="${row}" onclick="change()"></td>
+                                <td><div class="text" data-text="${row}"> Not Read</div><input type="checkbox" data-id="${row}" onclick="change()" class="checkbox"></td>
                                 <td><button data-row="${row}" class="remove" onclick="remove(event)">Remove</button></td>
                             </tr>`
         event.preventDefault();
