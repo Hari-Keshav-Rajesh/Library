@@ -1,0 +1,114 @@
+body{
+    display: flex;
+}
+
+.left{
+    background-color: #fc3468;
+    height: 100vh;
+    width:50vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+}
+
+.title{
+    color: antiquewhite;
+    font-size:8vh;
+    font-weight: bold;
+}
+
+.newButton{
+    color:#fc3468 ;
+    background-color: antiquewhite;
+    font-weight: bold;
+    height:5vh;
+    width:15vh;
+    font-size: 2vh;
+}
+
+.right{
+    height: 100vh;
+    width:40vh;
+    background-color: #fc3468;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+}
+
+.centre{
+    display: flex;
+    flex-direction: column;
+    gap:10vh;
+    width: 120vh;
+}
+
+.caption{
+    font-size: 3vh;
+    font-weight: bold;
+    margin-top: 10vh;
+}
+
+.table{
+    align-self: center;
+}
+
+.table th{
+    font-size:4vh;
+}
+
+.table td{
+    font-size: 3vh;
+    text-align: center;
+}
+
+.table th,.table td{
+    border-width: .5vh;
+    border-color: black;
+    border-style: solid;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: antiquewhite;
+    font-weight: bold;
+    font-size: 2vh;
+    gap:2vh;
+}
+
+.popupForm input{
+    height: 3vh;
+}
+
+.form-row{
+    display: flex;
+    justify-content: space-between;
+    padding:1vh;
+}
+
+.text{
+    font-size: 3vh;
+    padding: 3vh;
+}
+
+.submit{
+    color:#fc3468 ;
+    background-color: antiquewhite;
+    font-weight: bold;
+    height:5vh;
+    width:15vh;
+    font-size: 2vh;
+    padding: 1vh; 
+}
+
+.remove{
+    background-color: #fc3468;
+    color: antiquewhite;
+    font-weight: bold;
+    font-size: 2vh;
+}

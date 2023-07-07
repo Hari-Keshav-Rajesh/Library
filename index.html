@@ -8,31 +8,51 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="title">Your Personal Library</div>
-    <div class="library">
-        <div class="caption">List of Books</div>
+
+    <div class="left">
+        <div class="title">Your Personal Library</div>
+        <button class="newButton">Add Book</button>
     </div>
-    <button class="newButton">Add Book</button>
-    <form class="popupForm">
-        <label for="title">Title of Book</label>
-        <input type="text" id="title" name="title" required>
 
-        <label for="author">Name of Author</label>
-        <input type="text" id="author" name="author" required>
+    <div class="centre">
+        <div class="library">
+            <div class="caption">List of Books</div>
+        </div>
+        
+        <table class="table">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Number of Pages</th>
+                <th>Reading Status</th>
+                <th>Remove Book</th>
+            </tr>
+        </table>
+    </div>
 
-        <label for="pages">Number of Pages</label>
-        <input type="number" id="pages" name="pages" required>
+    <div class="right">
 
-        <button class="submit">Submit</button>
-    </form>
-    <table class="table">
-        <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Number of Pages</th>
-            <th>Reading Status</th>
-            <th>Remove Book</th>
-        </tr>
-    </table>
+        <form class="popupForm">
+
+            <div class="text">Please fill book details></div>
+
+            <div class="form-row">
+            <label for="title">Title of Book</label>
+            <input type="text" id="title" name="title" required>
+            </div>
+            
+            <div class="form-row">
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" required>
+            </div>
+            
+            <div class="form-row">
+            <label for="pages">Number of Pages</label>
+            <input type="number" id="pages" name="pages" required>
+            </div>
+
+            <button class="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
